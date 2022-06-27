@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addons>
+<addon id="plugin.video.gloriosotv" version="1.0.2+matrix" name="[B][COLOR chocolate]Glorioso Tv[/COLOR][/B]" provider-name="[B][COLOR yellow]Glorioso Tv[/COLOR][/B]">
+<requires>
+		<import addon="script.module.six" />
+		<import addon="script.module.kodi-six" />
+		<import addon="script.module.requests" optional="true"/>
+		<import addon="script.module.websocket" version="0.50.0"  optional="true"/>
+		<import addon="script.module.youtube.dl" optional="true"/>
+		<import addon="plugin.video.youtube" optional="true" />
+		<import addon="script.module.dateutil" optional="true" />
+		<import addon="script.module.resolveurl" optional="true"/>
+		<import addon="script.module.urlresolver" optional="true"/>
+		<import addon="script.module.cloudscraper" optional="true"/>
+		<import addon="script.module.inputstreamhelper" optional="true"/>
+		<import addon="script.module.slproxy" optional="true"/>
+	</requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+<extension point="xbmc.addon.repository" name=".Glorioso Repositorio">
+	<info compressed="false">https://github.com/gloriosotv/glorioso/raw/master/matrix/addons.xml</info>
+	<checksum>https://github.com/gloriosotv/glorioso/raw/master/matrix/addons.xml.md5</checksum>
+	<datadir zip="true">https://github.com/gloriosotv/glorioso/raw/master/matrix/</datadir>
+	<hashes>false</hashes>
+</extension> 	
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">[B][COLOR chocolate]OBRIGADO POR USAR NOSSO ADD-ON[/COLOR][/B]</summary>
+    <description lang="en">[B][COLOR chocolate]Glorioso Tv é apenas um AGREGADOR de links e, assim como o Google.com, apenas agrega e organiza os links externos. Não somos responsáveis pelos arquivos aqui encontrados.[/COLOR][/B]</description>
+    <news>
+[B][COLOR chocolate]PROIBIDO USO DO ADD-ON EM OUTRA REPO SEM AUTORIZAÇÃO[/COLOR][/B]
+</news>
+    <platform>all</platform>
+	<assets>
+<icon>icon.png</icon>
+<fanart>fanart.jpg</fanart>
+<screenshot>resources/screenshot/home.png</screenshot>
+<screenshot>resources/screenshot/movies.png</screenshot>
+<screenshot>resources/screenshot/series.png</screenshot>
+</assets>
+  </extension>
+</addon>
+
+<addon id="plugin.video.dailymotion_com" name="DailyMotion.com" version="2.4.3+matrix.1" provider-name="gujal">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+        <import addon="script.module.six" version="0.0.1"/>
+        <import addon="script.module.kodi-six" version="0.0.1"/>
+        <import addon="script.module.requests" version="2.4.3"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary lang="de_DE">Filme, TV, Musik, User-Clips und Live-Streams</summary>
+        <summary lang="en_GB">Movies, TV, Music, User-Clips, and Livestreams</summary>
+        <summary lang="fr_FR">Films, Séries TV, Musique, Clips, et Live</summary>
+        <summary lang="he_IL">סרטים, טלוויזיה, מוסיקה, סירטונים של המשתמש, תלת מימד והזרמה חיה</summary>
+        <description lang="de_DE">Dailymotion zieht 300 Millionen Nutzer aus der ganzen Welt an, die jeden Monat 3,5 Milliarden Videos auf ihrem Player ansehen.</description>
+        <description lang="en_GB">Dailymotion attracts 300 million users from around the world, who watch 3.5 billion videos on its player each month.</description>
+        <description lang="fr_FR">Dailymotion attire 300 millions d’utilisateurs qui regardent 3,5 milliards de vidéos sur son player chaque mois, à travers le monde.</description>
+        <description lang="he_IL">Dailymotion מושך 300 מיליון משתמשים מרחבי העולם שצופים ב -3.5 מיליארד סרטונים מדי חודש.</description>
+        <disclaimer lang="de_DE">Einige Teile dieses Addons sind in Ihrem Wohnsitzland möglicherweise nicht legal. Bitte informieren Sie sich vor der Installation bei den örtlichen Gesetzen.</disclaimer>
+        <disclaimer lang="en_GB">Some parts of this addon may not be legal in your country of residence - please check with your local laws before installing.</disclaimer>
+        <disclaimer lang="fr_FR">Certaines parties de cet addon peuvent ne pas être légales dans votre pays de résidence - s’il vous plaît vérifier avec vos lois locales avant d’installer.</disclaimer>
+        <disclaimer lang="he_IL">ייתכן שחלק מהתוספות האלו אינן חוקיות בארץ המגורים שלך - אנא בדוק את החוקים המקומיים שלך לפני ההתקנה.</disclaimer>
+        <news>
+[B]Version 2.4.3 - 02 Nov 2021[/B] 
+ - Fix search function prompting for keyboard input after playback
+ - Fix live playback issues
+ - Fix Nexus compatibility
+        </news>
+        <website>https://www.dailymotion.com</website>
+        <source>https://github.com/Gujal00/plugin.video.dailymotion_com</source>
+		<forum>https://forum.kodi.tv/showthread.php?tid=142626</forum>
+		<license>GPL-2.0-or-later</license>
+        <email>gujal at protonmail dot com</email>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+            <screenshot>resources/images/screenshot-01.jpg</screenshot>
+            <screenshot>resources/images/screenshot-02.jpg</screenshot>
+            <screenshot>resources/images/screenshot-03.jpg</screenshot>
+        </assets>
+    </extension>
+</addon>
+
+<addon id="plugin.video.f4mTester" version="4.0.7" name="f4mTester" provider-name="Joel e Tiago">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+		<import addon="script.video.F4mProxy" version="4.0.7"/>		
+        <import addon="inputstream.ffmpegdirect"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>  
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">f4mTester</summary>
+        <description></description>
+        <platform>all</platform>
+        <assets>
+			<icon>icon.png</icon>
+		</assets>
+    </extension>
+</addon>
+
+<addon id="script.video.F4mProxy" 
+	     name="F4mProxy" 
+	     version="4.0.7" 
+	     provider-name="Joel e Tiago">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0" />
+		<import addon="script.module.requests" />
+        <import addon="inputstream.ffmpegdirect" />
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+    <extension point="xbmc.python.pluginsource" library="addon.py">
+		<provides>executable</provides>
+	</extension>
+    
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<summary lang="en">Proxy for f4m</summary>
+		<description lang="en">Use this addon to play F4m v1 and v2 streams</description>
+		<assets>
+			<icon>icon.png</icon>
+		</assets>
+	</extension>
+</addon>
+
+<addon id="plugin.video.smr_link_tester" version="1.1.8" name="SMR Link Tester" provider-name="gujal">
+    <requires>
+        <!-- <import addon="xbmc.python" version="3.0.0"/> -->
+        <import addon="script.module.resolveurl"/>
+        <import addon="script.module.resolveurl.xxx"/>
+        <import addon="script.module.six" version="0.0.1"/>
+        <import addon="script.module.kodi-six" version="0.0.1"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>SMR Link Tester Addon</summary>
+        <description></description>
+        <platform>all</platform>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
+	</extension>
+</addon>
+
+<addon id="script.module.resolveurl.xxx" version="2.1.25" name="Adult Resolver SMR Extension" provider-name="gujal">
+	<requires>
+		<!-- <import addon="xbmc.python" version="2.1.0"/> -->
+        <import addon="script.module.resolveurl" version="5.1.0" />
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Resolve adult video host URL's to be playable in XBMC/Kodi.</summary>
+		<description lang="en">Resolve adult video host URL's to be playable in XBMC/Kodi.</description>
+		<platform>all</platform>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+	</extension>
+</addon>	
+	
+<addon id="repository.resolveurl" name="ResolveURL Repository" provider-name="gujal" version="1.0.0">
+  <extension point="xbmc.addon.repository" name="ResolveURL Repository">
+    <dir>
+      <info compressed="false">https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml</info>
+      <checksum>https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml.md5</checksum>
+      <datadir zip="true">https://raw.githubusercontent.com/Gujal00/smrzips/master/zips/</datadir>
+    </dir>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <description lang="en_GB">ResolveURL and Link Tester</description>
+    <license></license>
+    <language></language>
+    <website></website>
+    <news></news>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+    </assets> 
+  </extension>
+</addon>
+
+<addon id="script.module.inputstreamhelper" name="InputStream Helper" version="0.5.8" provider-name="emilsvennesson, dagwieers, mediaminister, horstle">
+  <requires>
+    <!--py3 compliant-->
+    <import addon="xbmc.python" version="2.25.0"/>
+    <import addon="script.module.pysocks" version="1.6.8" optional="true"/>
+  </requires>
+  <!-- This is needed to get an add-on icon -->
+  <extension point="xbmc.python.script" library="default.py">
+    <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.python.module" library="lib"/>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Kodi InputStream and DRM playback made easy</summary>
+    <summary lang="de_DE">Kodi InputStream und DRM Wiedergabe einfach gemacht</summary>
+    <summary lang="el_GR">Βοηθός Inputstream για το Kodi και εύκολη αναπαραγωγή DRM</summary>
+    <summary lang="fr_FR">La lecture Kodi InputStream et DRM en toute simplicité</summary>
+    <summary lang="es_ES">Kodi InputStream y reproducción DRM echa fácil</summary>
+    <description lang="en_GB">A simple Kodi module that makes life easier for add-on developers relying on InputStream based add-ons and DRM playback.</description>
+    <description lang="de_DE">Dieses einfache Kodi-Modul macht das Leben für Addon Entwickler einfacher, die auf InputStream basierte Addons und DRM Wiedergabe angewiesen sind.</description>
+    <description lang="el_GR">Μία απλή μονάδα για το Kodi η οποία διευκολύνει την ζωή των προγραμματιστών οι οποίοι εξαρτώνται από τα πρόσθετσ InputStream και αναπαραγωγή τύπου DRM.</description>
+    <description lang="ru_RU">Простой модуль для Kodi, который облегчает жизнь разработчикам дополнений, с использованием InputStream дополнений и воспроизведения DRM контента.</description>
+    <description lang="fr_FR">Un simple module Kodi qui simplifie la vie des développeurs de modules complémentaires en s’appuyant sur des modules complémentaires basés sur InputStream et sur la lecture de DRM.</description>
+    <description lang="es_ES">Un módulo Kodi simple que hace la vida más fácil para los desarrolladores de complementos que dependen de complementos basados en InputStream y reproducción de DRM.</description>
+    <news>
+v0.5.8 (2021-09-09)
+- Simplify Widevine CDM installation on ARM hardware
+- Update Chrome OS ARM hardware id's
+- Update Japanese and Korean translations
+
+v0.5.7 (2021-07-02)
+- Further improve Widevine CDM installation on ARM hardware
+
+v0.5.6 (2021-06-24)
+- Improve Widevine CDM installation on ARM hardware
+- Postpone Widevine CDM updates when user rejects
+
+v0.5.5 (2021-06-02)
+- Improve Widevine CDM installation on ARM hardware
+
+v0.5.4 (2021-05-27)
+- Fix Widevine CDM installation on ARM hardware
+
+v0.5.3 (2021-05-10)
+- Temporary fix for Widevine CDM installation on ARM hardware
+- Fix Widevine CDM installation on 32-bit Linux
+
+v0.5.2 (2020-12-13)
+- Update Chrome OS ARM hardware id's
+
+v0.5.1 (2020-10-02)
+- Fix incorrect ARM HWIDs: PHASER and PHASER360
+- Added Hebrew translations
+- Updated Dutch, Japanese and Korean translations
+
+v0.5.0 (2020-06-25)
+- Extract Widevine CDM directly from Chrome OS, minimizing disk space usage and eliminating the need for root access
+- Improve progress dialog while extracting Widevine CDM on ARM devices
+- Support resuming interrupted downloads on unreliable internet connections
+- Reshape InputStream Helper information dialog
+- Updated Dutch, English, French, German, Greek, Hungarian, Romanian, Russian, Spanish and Swedish translations
+    </news>
+    <platform>all</platform>
+    <license>MIT</license>
+    <website>https://github.com/emilsvennesson/script.module.inputstreamhelper/wiki</website>
+    <source>https://github.com/emilsvennesson/script.module.inputstreamhelper</source>
+    <assets>
+      <icon>resources/icon.png</icon>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="script.module.resolveurl" name="ResolveURL" version="5.1.70" provider-name="gujal">
+    <requires>
+        <!-- <import addon="xbmc.python" version="3.0.0" /> -->
+        <import addon="script.module.six" />
+        <import addon="script.module.kodi-six" />
+        <import addon="plugin.video.youtube" optional="true" />
+        <import addon="script.module.python.twitch" optional="true" />
+        <import addon="plugin.googledrive" optional="true" />
+    </requires>
+    <extension point="xbmc.python.module" library="lib" />
+    <extension point="xbmc.python.pluginsource" library="lib/default.py" />
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary lang="en_GB">Resolve common video host URL's to be playable in XBMC/Kodi.</summary>
+        <summary lang="es_ES">Resolver enlaces a videos de sitios populares para poder reproducirlos en XBMC/Kodi.</summary>
+        <summary lang="hr_HR">Prilagodi najčešće URL-ove video izvora kako bi radili u XBMC/Kodiju.</summary>
+        <summary lang="el_GR">Επίλυση συνδέσμων κοινών εξυπηρετητών σε μορφή βίντεο ικανό για αναπαραγωγή στο XBMC/Kodi.</summary>
+        <description lang="en_GB">Resolve common video host URL's to be playable in XBMC/Kodi, simplify addon development of video plugins requiring multi video hosts.</description>
+        <description lang="el_GR">Επίλυση συνδέσμων κοινών εξυπηρετητών σε μορφή βίντεο ικανό για αναπαραγωγή στο XBMC/Kodi, απλοποίηση της ανάπτυξης των προσθέτων που χρησιμοποιούν πολλαπλούς εξυπηρετητές για υλικό βίντεο</description>
+        <description lang="hr_HR">Prilagodi najčešće URL-ove video izvora kako bi radili u XBMC/Kodiju, pojednostavnjuje razvoj priključaka za video dodatke koji zahtjevaju višestruke video izvore.</description>
+        <disclaimer lang="en_GB">This script only resolves video content from legitimate file lockers without prejudice. If this script is being used by 3rd parties to resolve content that you feel infringes upon your Intellectual Property then please take your complaints to the actual website or developer linking to such content and not here. This script in no way searches for any content whatsoever.</disclaimer>
+        <disclaimer lang="el_GR">Το ανωτέρο σενάριο το μόνο που κάνει είναι να επιλύει οπτικοακουστικό περιεχόμενο από νόμιμες πηγές χωρίς προκατάληψη. Εάν το ανωτέρο σενάριο χρησιμοποιηθεί από τρίτους ώστε να επιλύσει περιεχόμενο το οποίο σας προκαλεί αντίδραση ότι παραβιάζει την πνευματική σας ιδιοκτησία παρακαλώ μεταφέρετε τα παραπονά σας στον ιστότοπο τον οποίο βρίσκεται το εν λόγω περιεχόμενο η τον δημιουργό ο οποίος πραγματοποιεί την σύνδεση και όχι εδω. Το σενάριο αυτό ουδεμία περίπτωση πραγματοποιεί αναζήτηση περιεχομένου.</disclaimer>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>
+</addons>
